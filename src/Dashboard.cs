@@ -431,6 +431,20 @@ namespace ShutdownSteam
                 if (!actions.Enabled || !games.Enabled || stop.Enabled) throw new InvalidOperationException("Monitoring controls did not restore correctly.");
             }
         }
+        internal void SaveLibraryScreenshot(string filename)
+        {
+            string steamRoot = path.Text;
+            // Keep real game artwork while hiding the machine-specific installation path.
+            games.ImageForItem = delegate(object item) { return artwork.Get(steamRoot, ((SteamApp)item).AppId); };
+            path.Text = "Steam folder (path hidden)";
+            Show(); ClientSize = new Size(1180, 840); SelectPage("Main"); Application.DoEvents();
+            using (var bitmap = new Bitmap(Width, Height))
+            {
+                DrawToBitmap(bitmap, ClientRectangle);
+                bitmap.Save(filename, System.Drawing.Imaging.ImageFormat.Png);
+            }
+        }
+
         internal void SavePublicAssets(string directory)
         {
             if (!demo) throw new InvalidOperationException("Public screenshots require demonstration data.");

@@ -8,9 +8,9 @@ Created by [MhDTam](https://github.com/MhDTam). Source code is licensed under MI
 
 ## Screenshot
 
-![ShutdownSteam dashboard](assets/Dashboard.png)
+![ShutdownSteam running with real Steam game artwork](docs/Screenshot.png)
 
-The screenshot uses demonstration data and a standard example Steam path. It contains no personal game library or local account information.
+Actual application screenshot with a real Steam game and its locally cached icon. The machine-specific folder path is hidden.
 
 ## Download and Run
 

@@ -18,6 +18,11 @@ namespace ShutdownSteam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            if (args.Length == 3 && args[0] == "--library-screenshot")
+            {
+                using (var form = new DashboardForm(args[2])) form.SaveLibraryScreenshot(args[1]);
+                return;
+            }
             if (args.Length == 2 && args[0] == "--public-preview")
             {
                 using (var form = new DashboardForm(null, true)) form.SavePublicAssets(args[1]);

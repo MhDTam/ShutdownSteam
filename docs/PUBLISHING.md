@@ -2,8 +2,9 @@
 
 Public repository: https://github.com/MhDTam/ShutdownSteam
 
-The public screenshot is `assets/Dashboard.png`. It contains demonstration data
-and is also the build-required visual skin. Raw source pictures, image-generation
+The public screenshot is `docs/Screenshot.png`. It shows the actual application
+with its machine-specific folder path hidden. `assets/Dashboard.png` contains
+demonstration data and is the build-required visual skin. Raw source pictures, image-generation
 notes, local previews, game caches, and build outputs are excluded from Git.
 
 ## First Upload
