@@ -1,0 +1,17 @@
+/portable/
+/dist/
+/release/
+/verification/
+/test-output/
+/assets/Emblem.png
+/ShutdownSteam.ps1
+/Neon Steam Power Emblem.png
+/ShutdownSteam Modern Control Dashboard.png
+/assets/Emblem-Transparent.png
+/assets/Emblem-Transparent.notes.md
+*.pdb
+*.user
+.vs/
+.idea/
+Thumbs.db
+Desktop.ini
